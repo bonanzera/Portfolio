@@ -1,0 +1,192 @@
+/*Parte 1: Nav*/
+
+/* Todos os elementos ganham margem zero e seu tamanho será medido 
+contando as bordas */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* o corpo da página ganha fonte arial e fundo preto */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+}
+
+/* A logo da CODEMOVIE terá 150px */
+/* A propriedade CSS object-fit especifica como o conteúdo de um
+elemento substituido deve ser ajustado á caixa estabelecida pela altura e largura usadas.*/
+/* O conteúdo substituido é dimensionado para manter sua proporção
+enquanto se encaixa na caixa de conteúdo do elemento: seu tamanho de 
+objeto concreto é resolvido como uma restrição de restrição em relação
+á largura e altura usadas do elemento. */
+.nav__logo {
+    width: 150px;
+    object-fit: contain;
+}
+
+/* A foto "Codemovies Usuário" é ajustar para conter na caixa com a largura de 80px*/
+.nav__usuario {
+    width: 80px;
+    object-fit: contain;
+}
+
+.nav {
+    position: fixed; /* sempre fica no mesmo lugar da página*/
+    top: 0; /* 0px do topo */
+    width: 100%; /* ocupa 100% da largura disponível*/
+    display: flex; /* elementos flexíveis*/
+    justify-content: space-between; /* os elementos serão igualmente espaçados*/
+    padding: 20px; /* padding de 20px do conteúdo as bordas em todos os lados*/
+    z-index: 1; /* fica acima de todos os outros elementos */
+    transition-timing-function: ease-in; /* efeito de transição com início lento "js"    */
+    transition: all 0.5s; /*aparece em 0.5s */
+}
+
+/* Parte 2: Header; */
+
+/* Configura a imagem de fundo do banner, centraliza, colocar um cor branca acima 
+o banner fica contido na div, com altura 560px */
+
+.banner {
+    background-image: url('img/berlin2.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    object-fit: contain;
+    height: 560px;
+}
+
+/* configura as margens, padding e altura da div banner */
+
+.banner__contents {
+    margin-left: 20px;
+    padding-top: 180px;
+    height: 180px;
+}
+
+/* o título terá fonte 3x maior que as demas. peso 800 e uma distancia em relação
+aos botões */
+
+.banner__title {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+}
+
+/* a drescrição tem 45 relativo de largura, linha vertical de 1.3 
+padding em relação ao topo de 1rem, tamanho de fonte e altura máxima 
+relativas
+e altura 190px */
+
+.banner__description {
+    width: 45rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    max-width: 360px;
+    height: 190px;
+}
+
+/* configuração dos botôes do banner */
+
+.banner__button {
+    cursor: pointer; /* cursor apontador */ 
+    color: #fff; /* cor branca */
+    outline: none; /* sem sublinhado */
+    border: none; /* sem borda */
+    font-weight: 700; /* negrito */
+    border-radius: 0.2vw; /* borda arredondada*/
+    padding-left: 2rem; /*paddin esquerda*/
+    padding-right: 2rem; /*padding direita*/
+    margin-right: 1rem; /*margem em cima */
+    padding-top: 0.5rem; /*padding em cima*/
+    padding-bottom: 0.5rem; /*padding em baixo*/
+    background-color: rgba(51, 51, 51, 0.5); /*cor de fundo*/
+}
+
+
+/* qunado selecionamos o botão com o mouse, ele muda de cor  com animação*/
+
+.banner__button:hover {
+    color: #000;
+    background-color: #e6e6e6;
+    transition: all 0.2s;
+}
+
+/* configuração que posiciona o banner e aplica  um fade out na imagem com a cor preta, ficando tipo uma fumaça de fundo    */
+
+.banner--fadeBottom {
+    margin-top: 262px;
+    height: 7.4rem;
+    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);   
+}
+
+/* parte 3: row*/
+
+/* largura de 100%, ajustado a div, altura maxima de 100px e margem direita de 10px, 
+transição de 150ms*/
+
+.row__poster {
+    width: auto;
+    flex: 0 1 auto; /* Flexbox não esticará as imagens automaticamente */
+    height: auto;
+    max-height: 150px; /* Ajuste a altura máxima */
+    max-width: 150px; /* Defina uma largura máxima */
+    object-fit: contain;
+    margin-right: 60px; /* Aumente a margem direita */
+    transition: all 150ms;
+    
+    
+}
+
+/* posters flexíveis, As propriedades overflow-x e overflow-y especicam se
+o estouro do conteúdo deve ser alterado apenas horizontalmente e verticalmente (ou ambos) padding de 30px por 10px aplicado em todas as direçôes*/
+
+.row__posters {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha, se necessário */
+    overflow-y: hidden;
+    overflow-x: auto; /* Habilita o scroll horizontal se necessário */
+    gap: 20px; /* Adiciona espaçamento entre os elementos */
+    padding: 30px 10px; /* Ajuste o padding */
+}
+
+/* quando passamos o mouse no poster, ele cresce */
+
+.row__poster:hover {
+    transform: scale(1.25);
+}
+
+/* o poster grade tem altura maxima de 300px */
+
+.row__posterLarge {
+    max-height: 300px;
+}
+
+/* o poster largo cresce mais quando selecionado */
+
+.row__posterLarge:hover {
+    transform: scale(1.20);
+}
+
+/* cor branca e margem a esquerda de 20px */
+
+.row {
+    color: white;
+    margin-left: 5px;
+    margin-bottom: 20px; /* Adiciona margem inferior */
+}
+/* configuração a barra de rolagem */
+.row__posters::-webkit-scrollbar {
+    display: none;
+}
+/* Nav Black*/
+
+/* cor de fundo preta do script podendo alterar*/
+.nav__black {
+    background-color: #111;
+}
