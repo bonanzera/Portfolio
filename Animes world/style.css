@@ -1,0 +1,247 @@
+/* Importa a fonte Poppins do Google Fonts com pesos 400 e 600 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Define a fonte padrão do corpo da página como Poppins e sans-serif. 
+   Também aplica um gradiente suave ao fundo da página. */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    margin: 0;
+    padding: 0;
+    color: #333; /* cor preta */
+    text-align: center;
+}
+
+/* Estiliza a navegação dentro do cabeçalho com flexbox para centralizar e alinhar os itens */
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Estilização do cabeçalho com um gradiente colorido, sombra e fixação no topo da página */
+header {
+    background: linear-gradient(135deg, #ff4e50, #f9d423);
+    color: white; /* cor branca */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Fixa o cabeçalho no topo ao rolar a página */
+    top: 0; /* Define a posição do cabeçalho no topo da página */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estiliza o título principal no cabeçalho com um tamanho de fonte maior */
+header h1 {
+    margin: 10px 0;
+    font-size: 2.5em;
+}
+
+/* Estiliza o subtítulo do cabeçalho com um tamanho de fonte menor e peso mais leve */
+header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+/* Estiliza o logo da navegação, posicionando-o de forma absoluta e garantindo 
+   que ele esteja sempre visível acima de outros elementos */
+.nav_logo {
+    width: 150px; /* largura disponível de 150px*/
+    object-fit: contain; /*object-fit especifica como o conteúdo de um elemento substituido deve ser ajustado á caixa estabelecida pela altura e largura usadas.*/
+    position: absolute;
+    top: 10px; /* 10px do topo */
+    left: 10px;
+    z-index: 1001; /* Garante que o logo fique acima de outros elementos */
+}
+
+/* Configura o container de navegação com display flex e centraliza os itens */
+nav {
+    display: flex; 
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* Estiliza a lista de navegação, removendo o estilo padrão e aplicando espaçamento entre os itens */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* elementos flexíveis*/
+    gap: 25px;
+}
+
+/* Remove margens padrão dos itens da lista de navegação */
+.nav-list li {
+    margin: 0;
+}
+
+/* Estiliza os links de navegação, adicionando espaçamento, bordas arredondadas 
+   e transições suaves para interações com o mouse */
+.nav-list a {
+    text-decoration: none;
+    color: white; /* cor branca */
+    font-weight: 600;
+    padding: 0px 20px;
+    transition: background 0.3s, color 0.3s;
+    cursor: pointer; /* cursor apontador */
+    border-radius: 5px; /* Bordas arredondadas para os botões */
+}
+
+/* Muda a cor de fundo e do texto dos links de navegação ao passar o mouse */
+.nav-list a:hover {
+    background-color: #f9d423; /* Cor amarela de fundo ao passar o mouse */
+    color: #333; /* Cor preta do texto ao passar o mouse */
+    border-radius: 5px;
+}
+
+/* Ajusta a rolagem da página para que as seções tenham uma margem superior, 
+   evitando que fiquem escondidas atrás do cabeçalho */
+section {
+    scroll-margin-top: 80px; /* Ajuste conforme necessário, aqui definido em 80px */
+}
+
+/* Estiliza o carrossel de imagens, definindo altura, largura e configuração de transição */
+#carousel {
+    width: auto;
+    height: 700px; /* Aumenta a altura para maior destaque */
+    position: relative;
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+/* Define o estilo dos slides do carrossel, incluindo a transição para alternar entre slides */
+.carousel-slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Garante que as imagens do carrossel cubram todo o container sem distorcer */
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o espaço */
+}
+
+/* Estiliza a legenda das imagens no carrossel, incluindo tamanho de fonte e fundo semitransparente */
+.carousel-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-size: 1.8em; /* Aumenta o tamanho da fonte */
+    color: white; /* cor branca */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+/* Estiliza links de animes com layout flexível, espaçamento e transições */
+.anime-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+/* Estiliza cada link de anime com bordas arredondadas, sombra e transições */
+.anime-links a {
+    background: white;
+    border: 2px solid #ff4e50; /* borda com 2 pixel e solido com cor vermelha*/
+    padding: 15px 30px; /* padding de 15px por 30px do conteúdo as bordas em todos os lados*/
+    border-radius: 25px; /* borda arredondada com 25px*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background 0.3s;
+    text-decoration: none;
+    color: #ff4e50; /* cor vermelha */
+}
+
+/* Estiliza o efeito ao passar o mouse sobre os links de anime, mudando cor e aplicando efeito de zoom */
+.anime-links a:hover {
+    background: #ff4e50;
+    color: white; /* cor branca */
+    transform: translateY(-5px);
+}
+
+/* Estiliza a tabela com margens, sombra e espaçamento */
+table {
+    margin: 40px auto;
+    border-collapse: collapse;
+    width: 90%;
+    background-color: #fff; /* cor de fundo branca */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Define padding e bordas para as células da tabela, além do tamanho da fonte */
+table th, table td {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 1.2em;
+}
+
+/* Estiliza os cabeçalhos da tabela com fundo colorido e texto branco */
+table th {
+    background-color: #ff4e50; /* cor de fundo vermelha dos anime e iamgem e botão */
+    color: white; /* cor branca */
+    font-weight: 600; /* Semi Bold */
+}
+
+/* Estiliza a galeria de imagens com layout flexível, espaçamento e transições */
+.image-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Define o container para cada imagem na galeria, aplicando transições */
+.image-container {
+    display: inline-block;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 200px;
+}
+
+/* Estiliza cada imagem na galeria, garantindo que cubra o container e aplicando sombras e bordas arredondadas */
+.image-container img {
+    width: 200px; /* Define o tamanho das imagens */
+    height: auto;
+    aspect-ratio: 1; /* Mantém as imagens quadradas */
+    object-fit: cover; /* Ajusta a imagem ao container sem distorcer */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Aplica efeito de zoom e sombra intensa quando o mouse passa sobre a imagem */
+.image-container:hover img {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Aumenta a intensidade da sombra */
+    transform: scale(1.1); /* Aplica zoom ao passar o mouse */
+}
+
+/* Estiliza a legenda de cada imagem na galeria */
+.image-container .caption {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* Estiliza o rodapé com cor de fundo escura, texto branco e centralizado */
+footer {
+    background-color: #333;
+    color: white; /* cor branca */
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+}

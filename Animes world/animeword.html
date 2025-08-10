@@ -1,0 +1,145 @@
+<html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime World</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="img/anime_world _logo.webp">
+<script src="script.js" async></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll('.carousel-slide');
+    let currentSlide = 0;
+
+    const showSlide = (index) => {
+                slides[currentSlide].style.opacity = 0;
+                currentSlide = (index + slides.length) % slides.length;
+                slides[currentSlide].style.opacity = 1;
+    };
+
+    setInterval(() => {
+                showSlide(currentSlide + 1);
+    }, 3000);
+ });
+</script>
+</head>
+<body> 
+    <header id="#home">
+    <img class="nav_logo" src="img/Anime_world_logo 1.png" alt="Anime World Logo">
+    <nav aria-label="Menu de navegação principal">
+<ul class="nav-list">
+    <li><a href="#Top-Animes">Top Animes</a></li>
+    <li><a href="#featured">Destaques</a></li>
+    <li><a href="#other-animes">Outros Animes</a></li>
+</ul>
+    </nav>
+    <h1>Anime World</h1>
+<h2>Seu portal para os melhores animes!</h2>
+    </header>
+
+    <!-- Carrossel de Destaque -->
+<section id="carousel">
+    <div class="carousel-slide">
+    <img src="img/banner_naruto.jpg" alt="Naruto Banner">
+    <div class="carousel-caption">Naruto</div>
+    </div>
+    <div class="carousel-slide">
+    <img src="img/banner_dragonball.jpg" alt="Dragonball Banner">
+    <div class="carousel-caption">Dragon Ball</div>
+    </div>
+    <div class="carousel-slide">
+        <img src="img/one_pi_banner.jpg" alt="One Piece Banner">
+        <div class="carousel-caption">One Piece</div>
+    </div>
+</section>
+    <main>
+<section id="Top-Animes">
+    <h2>Top 5 Melhores Animes</h2>
+<div class="anime-links">
+    <a href="dragonball.html">Dragonball</a>
+    <a href="naruto.html">Naruto</a>
+    <a href="pokemon.html">Pokémon</a>
+    <a href="cavaleiros_do_zodiaco.html">Cavaleiros do Zodíaco</a>
+    <a href="jojo_bizarre_adventure_2.html">Jojo Bizarre Adventure</a>
+</div>
+</section>
+    
+<section id="featured">
+<h2>Animes em Destaque</h2>
+<table>
+<thead>
+    <tr>
+    <th>Anime</th>
+    <th>Imagem</th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+   <td>Dragonball</td>
+   <td><img src="img/dragonball.jpg" alt="Dragonball" width="200" height="200"></td>
+</tr>
+<tr>
+    <td>Naruto</td>
+    <td><img src="img/naruto.webp" alt="Naruto" width="200" height="200"></td>
+</tr>
+<tr>
+    <td>Pokémon</td>
+    <td><img src="img/pokemon.jpg" alt="Pokémon" width="200" height="200"></td>
+</tr>
+<tr>
+    <td>Cavaleiros do Zodíaco</td>
+    <td><img src="img/cavaleiros_do_zodiaco.jpg" alt="Cavaleiros do Zodíaco" width="200" height="200"></td>
+</tr>
+<tr>
+    <td>Jojo Bizarre Adventure</td>
+    <td><img src="img/jojo_bizarre_adventure.jpg" alt="Jojo Bizarre Adventure" width="200" height="200"></td>
+</tr>
+</tbody>
+</table>
+</section>
+    
+<section id="other-animes">
+    <h2>Outros Animes</h2>
+<div class="image-galeria">
+<div class="image-container">
+    <img src="img/deathnote.avif" alt="Death Note">
+    <div class="caption">Death Note</div>
+</div>
+<div class="image-container">
+        <img src="img/inuyasha.avif" alt="Inuyasha">
+    <div class="caption">Inuyasha</div>
+</div>
+<div class="image-container">
+        <img src="img/one_piece.jpg" alt="One Piece">
+        <div class="caption">One Piece</div>
+</div>
+<div class="image-container">
+    <img src="img/Samurai_X.webp" alt="Samurai X">
+    <div class="caption">Samurai X</div>
+</div>
+<div class="image-container">
+    <img src="img/cowboy_bebop.avif" alt="Cowboy Bebop">
+    <div class="caption">Cowboy Bebop</div>
+</div>
+    <div class="image-container">
+    <img src="img/hunterxhunter.jpg" alt="Hunter x Hunter">
+    <div class="caption">Hunter x Hunter</div>
+</div>
+<div class="image-container">
+        <img src="img/codegeass.jpg" alt="Code Geass">
+        <div class="caption">Code Geass</div>
+</div>
+<div class="image-container">
+        <img src="img/bleach.jpg" alt="Bleach">
+        <div class="caption">Bleach</div>
+</div>
+    
+</section>
+</main>
+    
+<footer>
+        &copy; Desenvolvido por Abrahão Capucho.
+</footer>
+</body>
+</html>
